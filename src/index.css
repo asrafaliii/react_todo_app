@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inputStyles {
+  @apply bg-slate-100 text-slate-600 dark:text-slate-200 rounded-lg p-3 outline-transparent border-2 border-transparent hover:border-violet-600 focus:border-violet-600 focus:outline-none transition dark:bg-slate-800;
+}
+
+.btn {
+  @apply bg-violet-600 hover:bg-violet-700 py-3 px-6 text-slate-50 rounded-lg w-auto transition dark:bg-violet-800 dark:hover:bg-violet-900;
+}
+
+.btn:active {
+  @apply scale-95;
+}
+
+@layer components {
+  .tasksList > li:first-of-type article {
+    @apply bg-violet-600 text-slate-100 dark:bg-violet-800;
+  }
+  .tasksList > li:first-of-type article .description {
+    @apply text-violet-300;
+  }
+  .tasksList > li:first-of-type article > div {
+    @apply border-violet-500 dark:border-violet-700;
+  }
+  .listView1 article {
+    @apply h-40;
+  }
+  .listView2 article {
+    @apply h-64;
+  }
+  .children-styles {
+    @apply text-slate-400;
+  }
+  .children-styles button {
+    @apply p-1;
+  }
+  .children-styles svg {
+    @apply w-6 h-6;
+  }
+  .inputStyles::placeholder {
+    @apply text-slate-400 dark:text-slate-400;
+  }
+  .stylesInputsField input,
+  .stylesInputsField textarea,
+  .stylesInputsField select {
+    @apply inputStyles mt-1;
+  }
+  .stylesInputsField label {
+    @apply mb-4 text-slate-600 dark:text-slate-500;
+  }
+  .barProgress {
+    @apply bg-slate-200 w-full h-2 rounded-full overflow-hidden dark:bg-slate-700/[.3];
+  }
+  .barProgress > div {
+    @apply bg-violet-600 h-full;
+  }
+  .itemDirectory > .buttonsDir {
+    @apply xl:opacity-0 transition opacity-100;
+  }
+  .itemDirectory:hover > .buttonsDir {
+    @apply opacity-100;
+  }
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-slate-200 dark:bg-slate-800;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-md border border-red-400;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-600;
+}
